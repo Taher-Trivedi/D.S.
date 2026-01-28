@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<alloc.h>
+void main()
+{
+	int t,z,*ptr;
+	clrscr();
+	printf("enter number of element:");
+	scanf("%d",&t);
+	ptr=(int*)alloc(t,sizeof (int));
+	for (z=0; z<t; z++)
+	{
+		printf("enter value %d:",t+1);
+		scanf("%d",ptr+t);
+	}
+	for (z=0; z<t; z++)
+	{
+		printf("%d : %d",z+1,*(ptr+t	));
+	}
+	free(ptr);
+	getch();
+}
